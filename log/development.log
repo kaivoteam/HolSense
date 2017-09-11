@@ -32945,3 +32945,37 @@ Processing by SchoolsController#index as HTML
 Completed 200 OK in 238ms (Views: 233.4ms | ActiveRecord: 0.5ms)
 
 
+DEPRECATION WARNING: ActionView::Template::Handlers::Erubis is deprecated and will be removed from Rails 5.2. Switch to ActionView::Template::Handlers::ERB::Erubi instead. (called from <top (required)> at /home/fefi/Documentos/2017-1/FESW/HolSense/holsense/config/environment.rb:5)
+DEPRECATION WARNING: ActionView::Template::Handlers::Erubis is deprecated and will be removed from Rails 5.2. Switch to ActionView::Template::Handlers::ERB::Erubi instead. (called from <top (required)> at /home/fefi/Documentos/2017-1/FESW/HolSense/holsense/config/environment.rb:5)
+DEPRECATION WARNING: ActionView::Template::Handlers::Erubis is deprecated and will be removed from Rails 5.2. Switch to ActionView::Template::Handlers::ERB::Erubi instead. (called from <top (required)> at /home/fefi/Documentos/2017-1/FESW/HolSense/holsense/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2017-09-11 18:36:06 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SchoolsController#index as HTML
+  Rendering schools/index.html.erb within layouts/application
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  Rendered schools/index.html.erb within layouts/application (47614.7ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 48081ms (Views: 48049.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-11 18:38:25 -0300
+Processing by SchoolsController#index as HTML
+  Rendering schools/index.html.erb within layouts/application
+  [1m[36mSchool Load (4.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  Rendered schools/index.html.erb within layouts/application (17.1ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 193ms (Views: 186.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-11 18:38:29 -0300
+Processing by SchoolsController#index as HTML
+  Rendering schools/index.html.erb within layouts/application
+  [1m[36mSchool Load (1.8ms)[0m  [1m[34mSELECT "schools".* FROM "schools"[0m
+  Rendered schools/index.html.erb within layouts/application (21.3ms)
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 234ms (Views: 229.7ms | ActiveRecord: 1.8ms)
+
+

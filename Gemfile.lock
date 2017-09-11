@@ -84,6 +84,7 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.6.1)
+    erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
     font-awesome-rails (4.7.0.2)
@@ -252,6 +253,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise
+  erubis
   jbuilder (~> 2.5)
   jquery-easing-rails
   jquery-rails
