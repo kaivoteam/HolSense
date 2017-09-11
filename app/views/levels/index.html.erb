@@ -1,0 +1,70 @@
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+
+            
+        </ul>
+      </div>
+  </div>
+</nav>
+      
+
+
+
+<div class="wrapper">
+  <div class="header header-filter"> <!-- style="background-image: url('bg2.jpeg');"-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="brandasd">
+            <h1>Niveles y asignaturas</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main main-raised">
+    <div class="card card-nav-tabs">
+              <div class="header header-info">
+                <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                <div class="nav-tabs-navigation">
+                  <div class="nav-tabs-wrapper">
+                    <ul class="nav nav-tabs" data-tabs="tabs">
+
+                        <% @levels.each do |level| %>
+                          <li class="col-md-2 text-center">
+                            <a href="#dashboard" data-toggle="tab">
+                              <i class="material-icons">dashboard</i>
+                              <%=level.name%>
+                            </a>
+                          </li>
+                        <% end %> 
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                <div class="tab-content text-center">
+                  <div class="tab-pane active" id="profile">
+                    <p> I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. </p>
+                  </div>
+                  <div class="tab-pane" id="messages">
+                    <p> I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</p>
+                  </div>
+                  <div class="tab-pane" id="settings">
+                    <p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
+                  </div>
+                </div>
+              </div>
+            </div>        
+  
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+<p id="notice"><%= notice %></p>
+

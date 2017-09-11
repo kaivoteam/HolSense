@@ -1,0 +1,72 @@
+<!-- Terminar barra de navegacion -->
+
+              <div class="collapse navbar-collapse" id="example-navbar-primary">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+<div class="wrapper">
+  <div class="header header-filter"> <!-- style="background-image: url('bg2.jpeg');"-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="brandasd">
+            <h1>Inicio sesión</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main main-raised">
+    <div class="section">
+      <div class="container"></div>
+
+      <div class="row">
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), class: 'form-group') do |f| %>
+
+
+  <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+    <div class="input-group">
+      <span class="input-group-addon">
+        <i class="material-icons">face</i>
+      </span>
+      <%= f.email_field :email, autofocus: true, class: "form-control is-empty", placeholder: "Usuario" %>
+      <span class="input-group-addon"> </span>
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon">
+        <i class="material-icons">lock_outline</i>
+      </span>
+      <%= f.password_field :password, class: "form-control", placeholder: "Contraseña", autocomplete: "off" %>
+      <span class="material-input"> </span>
+    </div>
+
+    <%# if devise_mapping.rememberable? -%>
+      <!--div class="checkbox">
+        <label-->
+          <!--%= #f.check_box :remember_me, name: "optionsCheckboxes", class: "checkbox-material" %>
+          Recordarme
+        </label>
+      </div-->
+    <!--% #end -%-->
+
+    <div class="actions text-center">
+      <%= f.submit "Iniciar sesión", class: "btn btn-primary " %>
+    </div>
+  </div>
+<% end %>
+
+<%#= render "users/shared/links" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

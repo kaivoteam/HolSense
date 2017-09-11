@@ -1,0 +1,58 @@
+<!-- Terminar barra de navegacion -->
+
+              <div class="collapse navbar-collapse" id="example-navbar-primary">
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                        <%= link_to edit_user_registration_path,  class: 'login-button' do %><i class="material-icons">account_circle</i>Editar<% end %>
+                  </li>
+                  <li>    
+                        <%= link_to destroy_user_session_path, method: :delete, class: 'login-button' do %><i class="material-icons">account_circle</i> Cerrar sesión<% end %> 
+                      
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+
+<div class="wrapper">
+  <div class="header header-filter"> <!-- style="background-image: url('bg2.jpeg');"-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="brandasd">
+            <h1>Asignaturas</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main main-raised">
+    <div class="section">
+      <div class="container"></div>
+            <!--%= #button_to "ad", root_path, form_class: "btn btn-primary btn-fab btn-fab-mini btn-round" %-->
+            <div class="row">
+              <% @subjects.each do |subject| %>
+                <div class="col-md-4 text-center">
+                  <h3><%=subject.name%></h3>
+                  <% if current_user.nil? %>
+                    <%= link_to new_user_session_path do %>
+                      <%= image_tag "avatar.jpg", class: "img-circle img-raised img-responsive" %>
+                    <% end %>
+                  <% else %>
+                    <%= link_to subjects_path do %>
+                      <%= image_tag "avatar.jpg", class: "img-circle img-raised img-responsive" %>
+                    <% end %>
+                  <% end %>
+                      
+
+                  <h5><%=subject.description%></h5>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
