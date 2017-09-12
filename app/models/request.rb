@@ -1,4 +1,4 @@
 class Request < ApplicationRecord
   has_one :section
-  belong_to :user
+  belongs_to :user
 end

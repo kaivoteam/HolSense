@@ -87,33 +87,7 @@
               </div>
             </div>
 
-    <div class="section">
-      <div class="container"></div>
-
-
-            <!--%= #button_to "ad", root_path, form_class: "btn btn-primary btn-fab btn-fab-mini btn-round" %-->
-            <div class="row">
-              <ul class="nav nav-pills nav-pills-primary" role="tablist">
-                <% @levels.each do |level| %>
-                  <li class="col-md-2 text-center">
-                    <a href="#dashboard" role="tab" data-toggle="tab">
-                      <i class="material-icons">dashboard</i>
-                      <%=level.name%>
-                    </a>
-                  </li>
-                <% end %>  
-              </ul>
-      
-              <% @subjects.each do |subject| %>
-                <div class="col-md-4 text-center">
-                  <h3><%=subject.name%></h3>
-                                      
-
-                  <h5><%=subject.description%></h5>
-                </div>
-              <% end %>
-            </div>
-
+    
             
 
 

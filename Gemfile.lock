@@ -254,6 +254,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   erubis
+  i18n
   jbuilder (~> 2.5)
   jquery-easing-rails
   jquery-rails
