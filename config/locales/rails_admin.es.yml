@@ -16,6 +16,7 @@ es:
       is_exactly: "Es exáctamente"
       starts_with: Comienza con
       ends_with: Termina con
+      title: 'Administrador'
     loading: "Cargando..."
     home:
       name: Inicio
@@ -58,6 +59,7 @@ es:
       item: "Elemento"
       message: "Mensaje"
       description: "Descripción"
+      last_created: 'Último creado'
     actions:
       dashboard:
         title: "Administración del sitio"
