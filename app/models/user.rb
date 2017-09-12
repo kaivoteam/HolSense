@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :school
-  has_many :levels
+  has_many :subjects
 
   validates :email, presence: true
   validates :password, presence: true

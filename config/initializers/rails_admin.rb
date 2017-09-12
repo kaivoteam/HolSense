@@ -105,6 +105,9 @@ RailsAdmin.config do |config|
     field :subjects do
       label 'Asignaturas' # Change the label of this field
     end
+    field :school do
+      label 'Colegio' # Change the label of this field
+    end
     field :subject_role do
       label 'Asignatura/Profesor' # Change the label of this field
     end
