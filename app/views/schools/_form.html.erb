@@ -1,4 +1,4 @@
-<%= form_with(model: school, local: true) do |form| %>
+<%= form_with(model: school, local: true, html: { multipart: true }) do |form| %>
   <% if school.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(school.errors.count, "error") %> prohibited this school from being saved:</h2>
@@ -30,6 +30,12 @@
     <%= form.label :direction %>
     <%= form.text_field :direction, id: :school_direction %>
   </div>
+
+  <div class="field">
+    <%= form.file_field :avatar %>
+    <%= form.text_field :avatar, id: :school_avatar %>
+  </div>
+  
 
   <div class="actions">
     <%= form.submit %>

@@ -53,6 +53,7 @@ RailsAdmin.config do |config|
     end
   end
   config.model 'School' do
+    #configure :avatar, :jcrop
     label 'Colegio' # Change the label of this model class
     label_plural 'Colegios'
     field :name do
@@ -66,6 +67,12 @@ RailsAdmin.config do |config|
     end
     field :direction do
       label 'Dirección' # Change the label of this field
+    end
+    field :avatar, :paperclip do
+      label 'Imagen de colegio'
+     # jcrop_options aspectRatio: 140.00/90.0
+     # fit_image true
+      delete_method :delete_avatar
     end
   end
   config.model 'User' do
@@ -100,6 +107,12 @@ RailsAdmin.config do |config|
     end
     field :subject_role do
       label 'Asignatura/Profesor' # Change the label of this field
+    end
+    field :avatar, :paperclip do
+      label 'Imagen de perfil'
+     # jcrop_options aspectRatio: 140.00/90.0
+     # fit_image true
+      delete_method :delete_avatar
     end
   end
   config.model 'Subject' do

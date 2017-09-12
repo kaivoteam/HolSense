@@ -34,16 +34,17 @@
             <!--%= #button_to "ad", root_path, form_class: "btn btn-primary btn-fab btn-fab-mini btn-round" %-->
             <div class="row">
               <% @schools.each do |school| %>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center center-block">
                   <h3><%=school.name%></h3>
+
                   <% if current_user.nil? %>
                     <%= link_to new_user_session_path do %>
-                      <%= image_tag "avatar.jpg", class: "img-circle img-raised img-responsive" %>
-                      <!--%= #image_tag @product.photo.url %-->
+                      <%= image_tag school.avatar.url(:large), class: "img-circle img-raised img-responsive center-block" %>
+                      <!--%= #image_tag  "avatar.jpg" @product.photo.url %-->
                     <% end %>
                   <% else %>
                     <%= link_to subjects_path do %>
-                      <%= image_tag "avatar.jpg", class: "img-circle img-raised img-responsive" %>
+                     <%= image_tag school.avatar.url(:large), class: "img-circle img-raised img-responsive center-block" %>
                     <% end %>
                   <% end %>
                       
