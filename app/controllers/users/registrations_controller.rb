@@ -9,6 +9,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super
   end
 
+  # GET /resource/show
+  def show
+    @user = current_user
+  end
+
   # POST /resource
   # def create
   #   super
@@ -22,10 +27,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # PUT /resource
   def update
     super
-  end
-
-  def show
-    @users = User.all
   end
 
   # DELETE /resource
@@ -52,6 +53,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def user_params
     params.require(:user).permit(:avatar)
   end
+
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
   #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])

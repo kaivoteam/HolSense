@@ -19,8 +19,7 @@
                                     </li>
                                     <li class="divider"></li>
                                   <% else %>
-                                    <li>
-                                      <%= link_to "Ver perfil", profile_path(current_user) %>
+                                    <li><a href="#">Ver Perfil</a>
                                     </li>
                                     <li>
                                       <%= link_to "Editar perfil", edit_user_registration_path(current_user.id) %>
@@ -46,38 +45,53 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <div class="brandasd">
-            <h1>Colegios</h1>
+            <h1>Ver Perfil </h1>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="main main-raised">
+<div class="main main-raised">
     <div class="section">
       <div class="container"></div>
-            <!--%= #button_to "ad", root_path, form_class: "btn btn-primary btn-fab btn-fab-mini btn-round" %-->
-            <div class="row">
-              <% @schools.each do |school| %>
-                <div class="col-md-4 text-center center-block">
-                  <h3><%=school.name%></h3>
 
-                  <% if current_user.nil? %>
-                    <%= link_to new_user_session_path do %>
-                      <%= image_tag school.avatar.url(:medium), class: "img-circle img-raised img-responsive center-block" %>
-                      <!--%= #image_tag  "avatar.jpg" @product.photo.url %-->
-                    <% end %>
-                  <% else %>
-                    <%= link_to subjects_path do %>
-                     <%= image_tag school.avatar.url(:medium), class: "img-circle img-raised img-responsive center-block" %>
-                    <% end %>
-                  <% end %>
-                  <h5><%=school.description%></h5>
-                </div>
+      <div class="row">
+
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2 ">
+          <%= image_tag current_user.avatar.url(:medium), class: "img-circle img-raised img-responsive center-block" %>
+        </div>
+
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2  ">
+            <h2><span class="label label-primary">Email</span></h2>
+          <div class="input-group text-center">
+            <h1><%= @user.email%></h1>
+            <span class="input-group-addon"> </span>
+          </div>
+        </div>
+
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2  ">
+            <h2><span class="label label-primary">Tipo de usuario</span></h2>
+          <div class="input-group text-center">
+            <h1><% if @user.holsense_role? %>
+                Gestor interno
+              <% elsif @user.utp_role? %>
+                Coordinador UTP
+              <% else %>          
+                Profesor
               <% end %>
-            </div>
+            </h1>
+            <span class="input-group-addon"> </span>
+          </div>
+        </div>  
+  </div>
+
+<%#= render "users/shared/links" %>
           </div>
         </div>
       </div>
+    </div>
   </div>
 </div>
+
+
