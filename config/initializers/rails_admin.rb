@@ -51,7 +51,17 @@ RailsAdmin.config do |config|
     field :school do
       label 'Colegio' # Change the label of this field
     end
+    object_label_method do
+      :custom_label_method
+    end
   end
+
+  Lavel.class_eval do
+    def custom_label_method
+      "#{self.name}"
+    end
+  end
+
   config.model 'School' do
     #configure :avatar, :jcrop
     label 'Colegio' # Change the label of this model class
@@ -74,7 +84,17 @@ RailsAdmin.config do |config|
      # fit_image true
       delete_method :delete_avatar
     end
+    object_label_method do
+      :custom_label_method
+    end
   end
+
+  School.class_eval do
+    def custom_label_method
+      "#{self.name}"
+    end
+  end
+
   config.model 'User' do
     label 'Usuario' # Change the label of this model class
     label_plural 'Usuarios'
@@ -117,7 +137,17 @@ RailsAdmin.config do |config|
      # fit_image true
       delete_method :delete_avatar
     end
+    object_label_method do
+      :custom_label_method
+    end
   end
+
+  User.class_eval do
+    def custom_label_method
+      "#{self.email}"
+    end
+  end
+
   config.model 'Subject' do
     label 'Asignatura' # Change the label of this model class
     label_plural 'Asignaturas'
@@ -130,7 +160,17 @@ RailsAdmin.config do |config|
     field :levels do
       label 'Cursos' # Change the label of this field
     end
+    object_label_method do
+      :custom_label_method
+    end
   end
+
+  Subject.class_eval do
+    def custom_label_method
+      "#{self.name}"
+    end
+  end
+
   config.model 'Section' do
     label 'Módulo' # Change the label of this model class
     label_plural 'Módulos'
@@ -143,7 +183,17 @@ RailsAdmin.config do |config|
     field :subject do
       label 'Asignatura' # Change the label of this field
     end
+    object_label_method do
+      :custom_label_method
+    end
   end
+
+  Section.class_eval do
+    def custom_label_method
+      "#{self.name}"
+    end
+  end
+
   config.model 'Request' do
     label 'Solicitud' # Change the label of this model class
     label_plural 'Solicitudes'
@@ -159,5 +209,15 @@ RailsAdmin.config do |config|
     field :user do
       label 'Usuario' # Change the label of this field
     end
+    object_label_method do
+      :custom_label_method
+    end
   end
+
+  Request.class_eval do
+    def custom_label_method
+      "#{self.id}"
+    end
+  end
+
 end

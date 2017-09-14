@@ -6,12 +6,18 @@ class Ability
     user ||= User.new # guest user (not logged in)
     if user.holsense_role?
       can :manage, :all
-          can :access, :rails_admin       # only allow admin users to access Rails Admin
-          can :dashboard                  # allow access to dashboard
+      can :access, :rails_admin       # only allow admin users to access Rails Admin
+      can :dashboard                  # allow access to dashboard
     end
     if user.utp_role?
       can :manage, Subject
       can :manage, Level
+      can :manage, Section
+    end
+    if user.subject_role?
+      can :read, Subject
+      can :read, Level
+      can :read, Section
     end
     
     # Define abilities for the passed in user here. For example:

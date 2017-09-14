@@ -19,3 +19,7 @@
 //= require rails-ujs
 //= require toastr
 //= require_tree .
+
+toastr.options = {
+  "closeButton": true
+}

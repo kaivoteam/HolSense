@@ -39,12 +39,12 @@
 
                   <% if current_user.nil? %>
                     <%= link_to new_user_session_path do %>
-                      <%= image_tag school.avatar.url(:large), class: "img-circle img-raised img-responsive center-block" %>
+                      <%= image_tag school.avatar.url(:medium), class: "img-circle img-raised img-responsive center-block" %>
                       <!--%= #image_tag  "avatar.jpg" @product.photo.url %-->
                     <% end %>
                   <% else %>
                     <%= link_to subjects_path do %>
-                     <%= image_tag school.avatar.url(:large), class: "img-circle img-raised img-responsive center-block" %>
+                     <%= image_tag school.avatar.url(:medium), class: "img-circle img-raised img-responsive center-block" %>
                     <% end %>
                   <% end %>
                   <h5><%=school.description%></h5>

@@ -2,6 +2,7 @@ class SubjectsController < ApplicationController
   #load_and_authorize_resource 
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
 
+
   # GET /subjects
   # GET /subjects.json
   def index

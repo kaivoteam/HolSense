@@ -1,6 +1,8 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+ # load_and_authorize_resource
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
+  before_action :authorize_admin
 
   # GET /resource/sign_up
   def new
@@ -40,7 +42,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
+
+  def authorize_admin
+    return unless current_user.nil?
+    redirect_to root_path, alert: 'No tiene permisos para crear un usuario'
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
