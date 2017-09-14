@@ -56,7 +56,7 @@ RailsAdmin.config do |config|
     end
   end
 
-  Lavel.class_eval do
+  Level.class_eval do
     def custom_label_method
       "#{self.name}"
     end
