@@ -1,5 +1,0 @@
-I"C(function() {
-  alert("estoy entrando acá");
-
-}).call(this);
-:ET
