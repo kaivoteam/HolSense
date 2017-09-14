@@ -14,9 +14,10 @@ class User < ApplicationRecord
   has_attached_file :avatar,:styles => {:thumb => "100x100#",
 									      :small  => "150x150>",
 									      :medium => "200x200", 
-									      :large => "400x400"},
+									      :large => "400x400",
+                        :perfil => "50x50"},
 									  default_style: :thumb,
-                    default_url: "/assets/default_avatar.jpg"
+                    default_url: "/assets/default_avatar_:style.png"
                     #default_url: "/missing_:style.png"
 
 

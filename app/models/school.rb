@@ -9,7 +9,7 @@ class School < ApplicationRecord
 									      :medium => "200x200", 
 									      :large => "400x400"},
 									  default_style: :thumb,
-                    default_url: "/assets/default_school.jpg"
+                    default_url: "/assets/default_school_:style.jpg"
                     #default_url: "/missing_:style.png"
 
 

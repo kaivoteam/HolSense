@@ -1,9 +1,17 @@
 es:
   activerecord:
     models:
-      level: "Nivel"
+      level: "Curso"
+      user: "Usuario"
+      school: "Colegio"
+      subject: "Asignatura"
+      section: "Modulo"
+    attributes:
+      user:    
+        current_password: "contraseña actual"
     errors:
       messages:
+        not_saved: "No se ha guardado"
         record_invalid: "La validación falló: %{errors}"
         restrict_dependent_destroy:
           has_one: No se puede eliminar el registro porque existe un %{record} dependiente
@@ -110,6 +118,7 @@ es:
   errors:
     format: "%{attribute} %{message}"
     messages:
+      not_saved: "No se ha guardado"
       accepted: debe ser aceptado
       blank: no puede estar en blanco
       present: debe estar en blanco

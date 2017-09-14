@@ -49,6 +49,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     redirect_to root_path, alert: 'No tiene permisos para crear un usuario'
   end
 
+  def user_params
+    params.require(:user).permit(:avatar)
+  end
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
   #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
