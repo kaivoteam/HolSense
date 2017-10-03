@@ -46,18 +46,6 @@ $('#user_subject_role').on('change', function () {
     }
 });
 
-$('[name=_save]').on('click',function(event){
-	var profesor = $('#user_subject_role');
-	var coordinador = $('#user_utp_role');
-	var largo_texto = $('[type=search]').val().length;
-	if(coordinador.is(':checked') && largo_texto==0){
-		alert("Te falta rellenar con el colegio");
-		event.preventDefault();
-	}
-	var lista_asignaturas = $('[class=form-control ra-multiselect-selection]').length;
-	alert(lista_asignaturas);
-
-});
 
 
 });

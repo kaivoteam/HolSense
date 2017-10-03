@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :images
   #get "dashboard", to: "schools#dashboard"
   get "dash_utp", to: "schools#dash_utp"
 
