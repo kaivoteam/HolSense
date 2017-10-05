@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170912232853) do
+ActiveRecord::Schema.define(version: 20171003004333) do
+
+  create_table "images", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "giro_gif"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "levels", force: :cascade do |t|
     t.string "name"
