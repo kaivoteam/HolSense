@@ -13,6 +13,7 @@ School.create(name: 'Colegio el Carmen Teresiano La nasmReina', description: "Co
 User.create! do |u|
     u.email = 'contactokaivo@gmail.com'
     u.password = 'kaivoteam'
+    u.password_confirmation = 'kaivoteam'
     u.holsense_role = 1
     u.utp_role = 0
     u.subject_role = 0
@@ -21,6 +22,7 @@ end
 User.create! do |u|
     u.email = 'utp@gmail.com'
     u.password = '123123123'
+    u.password_confirmation = '123123123'
     u.holsense_role = 0
     u.utp_role = 1
     u.subject_role = 0
@@ -29,6 +31,7 @@ end
 User.create! do |u|
     u.email = 'asignatura@gmail.com'
     u.password = '12341234'
+    u.password_confirmation = '12341234'
     u.holsense_role = 0
     u.utp_role = 0
     u.subject_role = 1
